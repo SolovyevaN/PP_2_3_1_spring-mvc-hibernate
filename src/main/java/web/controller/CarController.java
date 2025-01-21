@@ -17,12 +17,10 @@ public class CarController {
     private CarServiceImp carService;
 
     @GetMapping("/")
-    public String listCar (@RequestParam (defaultValue = "5") int count, Model model){
+    public String listCar(@RequestParam(defaultValue = "100") int count, Model model) {
         List<Car> cars = carService.listCar();
-        if(count >= 5){
-            model.addAttribute("cars", cars);
-        }else {
-            model.addAttribute("cars", cars.subList(0, Math.min(count,cars.size())));
+        if (count < cars.size()) {
+            cars = cars.subList(0, count);
         }
         model.addAttribute("cars", cars);
         return "cars";

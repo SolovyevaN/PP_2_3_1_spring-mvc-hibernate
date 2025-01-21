@@ -17,9 +17,4 @@ public class CarServiceImp implements CarService {
                 new Car("Ford", "Grey", 2020)
         );
     }
-
-    @Override
-    public int getCarCount(List<Car> cars) {
-        return cars.size();
-    }
 }

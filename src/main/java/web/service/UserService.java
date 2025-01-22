@@ -1,7 +1,8 @@
-package web.UserService;
+package web.service;
 
 import web.Model.User;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface UserService {

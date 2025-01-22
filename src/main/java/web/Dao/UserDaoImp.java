@@ -5,7 +5,7 @@ import web.Model.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
-
+@Repository
 public class UserDaoImp implements UserDao{
     @PersistenceContext
     private EntityManager entityManager;

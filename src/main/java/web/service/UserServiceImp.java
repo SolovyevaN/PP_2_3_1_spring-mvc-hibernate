@@ -43,7 +43,6 @@ public class UserServiceImp implements UserService {
             throw new NoSuchElementException("User with id " + id + " not found");
         }
         userDao.deleteUser(id);
-
     }
 
     @Override

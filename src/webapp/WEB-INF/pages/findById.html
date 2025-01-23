@@ -14,15 +14,9 @@
     <p><strong>Surname:</strong> <span th:text="${user.surname}"></span></p>
     <p><strong>Age:</strong> <span th:text="${user.age}"></span></p>
     <h2>Edit User</h2>
-    <form th:action="@{/updateUser/{id}(id=${user.id})}" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" th:value="${user.name}" required>
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" th:value="${user.surname}" required>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" th:value="${user.age}" min="1" required>
-        <button type="submit">Update</button>
-    </form>
+    <td>
+        <a th:href="@{/updateUser/{id}(id=${user.id})}">Edit</a>
+    </td>
 
     <h2>Delete User</h2>
     <form th:action="@{/deleteUser/{id}(id=${user.id})}" method="post" style="display: inline;">

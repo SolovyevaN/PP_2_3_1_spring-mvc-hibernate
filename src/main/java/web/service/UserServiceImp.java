@@ -5,7 +5,6 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import web.Dao.UserDao;
 import web.Model.User;
-
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -26,14 +25,13 @@ public class UserServiceImp implements UserService {
     }
 
     @Override
-    public void updateUser(User user) {
-    userDao.updateUser(user);
-
+    public User updateUser(User user) {
+    return userDao.updateUser(user);
     }
 
     @Override
-    public void findById(Long id) {
-    userDao.findById(id);
+    public User findById(Long id) {
+    return userDao.findById(id);
     }
 
     @Override

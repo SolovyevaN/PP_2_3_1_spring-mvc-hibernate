@@ -40,8 +40,9 @@ public class WebConfig implements WebMvcConfigurer {
         templateEngine.setEnableSpringELCompiler(true);
         return templateEngine;
     }
+
     @Bean
-    public HiddenHttpMethodFilter hiddenHttpMethodFilter(){
+    public HiddenHttpMethodFilter hiddenHttpMethodFilter() {
         return new HiddenHttpMethodFilter();
     }
 

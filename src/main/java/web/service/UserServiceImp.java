@@ -37,7 +37,6 @@ public class UserServiceImp implements UserService {
     }
 
     @Transactional
-    @RequestMapping(value = "/deleteUser/{id}", method = RequestMethod.DELETE)
     @Override
     public void deleteUser(Long id) {
         User user = userDao.findById(id);
